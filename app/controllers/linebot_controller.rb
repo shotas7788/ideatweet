@@ -23,10 +23,10 @@ class LinebotController < ApplicationController
           end
           message = [{
             type: 'text',
-            text: "キーワード何にしようかな〜〜"
+            text: "ハンバーガーの具は何にしようかな？"
           },{
             type: 'text',
-            text: "#{seed1} × #{seed2} !!"
+            text: "#{seed1} と #{seed2} で決まり!!"
           }]
           client.reply_message(event['replyToken'], message)
         end
@@ -46,7 +46,7 @@ class LinebotController < ApplicationController
   
   def select_word
     # この中を変えると返ってくるキーワードが変わる
-    seeds = ["アイデア１", "アイデア２", "アイデア３", "アイデア４"]
+    seeds = ["トマト", "エッグ", "ベーコン", "ハンバーグ", "レタス", "チーズ"]
     seeds.sample
   end
 
